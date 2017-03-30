@@ -4,36 +4,19 @@ include 'App/route.php';
 
 $route = new Route();
 
+	//	EJEMPLO PARA LLAMAR RUTAS CON URL LIMPIA 
+	$route->add('/nombre_ejemplo', 'controladores/carpeta_destino/archivo_a_cargar.php');
 
-	//	RUTAS DE RECEPCIÓN
-	$route->add('/citas', 'controladores/recepcion/recepcion.php');
-	$route->add('/control', 'controladores/recepcion/registro.php');
-	$route->add('/calendario', 'controladores/recepcion/calendario.php');
-	$route->add('/admin', 'controladores/recepcion/pagos.php');
-	$route->add('/primera_cita', 'controladores/recepcion/primera.php');
-	$route->add('/pagos', 'controladores/recepcion/pagos.php');	
-	$route->add('/paciente', 'controladores/recepcion/paciente.php');
+	/*
+		UNA VEZ CAMBIADO ESTE PUNTO, LA URL SE MOSTRARÁ ASÍ
 
-	//	RUTAS DE FARMACIA
-	$route->add('/orden_compra', 'controladores/farmacia/ordenes.php');
-	$route->add('/catalogo', 'controladores/farmacia/catalogo-productos.php');	
-	$route->add('/registrar_factura', 'controladores/farmacia/facturas.php');
+			miaplicacion.com/nombre_ejemplo
 
-	//	RUTAS DE ADMINISTRADOR
-	$route->add('/usuarios', 'controladores/admin/usuarios.php');
-	$route->add('/reporte_citas', 'controladores/admin/reportes.php');
+		EN LUGAR DE
+	
+			miaplicacion.com/archivo_a_cargar.php
 
-	//	RUTAS DE MÉDICO
-
-
-	//	OTRAS RUTAS
-	$route->add('/', 'controladores/index.php');
-	$route->add('/404', 'controladores/layouts/404.php');
-	$route->add('/cerrar', 'controladores/sesion/cerrar_sesion.php');
-
-
-	//	+++++++++++++++++	AÚN EN ESPERA...	++++++++++++++++++++++++
-	$route->add('/pedidos', 'controladores/admin/pedidos-farmacia.php');
-	$route->add('/directorio', 'controladores/farmacia/dir-telefonico.php');
+		LO QUE PERMITIRÁ UNA URL LIMPIA Y ENTENDIBLE
+	*/
 
 $route->submit();
